@@ -1,0 +1,212 @@
+header h2 {
+
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase; 
+}
+
+header #btn {
+    display: block; 
+    margin: 3em auto;
+    font-family: 'Oswald', sans-serif;
+    background-color: #ccc;
+    border: none;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+}
+
+header #btn:active, #btn:hover, #btn:focus {
+    display: block;
+    margin: 3em auto;
+    font-family: 'Oswald', sans-serif;
+    background-color: #fff;
+    border: none;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    border: 2px solid #ccc;
+    -webkit-transition: all 200ms ease-in;  
+    -ms-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;   
+    transition: all 200ms ease-in;   
+    outline-style: none;
+   
+}
+
+
+
+table {
+    min-width: 960px;
+    max-width: 960px;
+    margin: 10px auto;
+}
+
+thead tr {
+  background-color: #ccc;
+
+}
+
+thead td {
+  font-family: 'Oswald', sans-serif;
+}
+
+tr {
+  background: #fff;
+  border-bottom: 1px solid #FFF;
+  margin-bottom: 5px;
+  opacity: 0;
+  animation: fadeIn 0.9s 1;     
+  animation-fill-mode: forwards;  
+  position: relative;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1); 
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1); 
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);  
+}
+
+tr:nth-child(even) {
+  animation-delay: 0.5s;
+  background-color: lightgray;
+}  
+
+tbody td:nth-child(3n+0){
+  text-transform: lowercase;
+}
+
+tbody tr:hover
+{
+    
+    z-index: 999;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+td {
+  font-family: 'Quattro', serif;
+  text-align: left;
+  padding: 20px;
+  font-weight: 300;
+}
+
+
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('Oswald-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Quattro';
+  src: url('Quattrocento-Regular.ttf') format('truetype'); 
+}
+
+
+
+
+@media (max-width: 480px) {
+   table {
+    min-width: 100%;
+    max-width: 100%;    
+   }
+
+   thead {
+    display: none;
+
+   }
+
+   td {
+    display: block;
+  }
+}
+
+
+
+ 
+body {
+
+  height: 100%;
+  width: 100%;
+}
+
+.sky {
+    height: 300px;
+    width: 100%;
+    background-color: aqua;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.grass {
+
+    height: 300px;
+    width: 100%;
+    background-color: green;
+    margin: 0;
+    padding: 0;
+
+}
+
+.road {
+
+    height: 400px;
+    width: 100%;
+    background-color: grey;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+img {
+      width: 100px;
+      position: absolute;
+      left: 0;
+      animation-name: drive;
+      animation-duration: 3s;
+      animation-fill-mode: both;
+
+      animation-delay: 1s;
+}
+
+
+
+@keyframes drive {
+
+  0% {
+   
+   transform: translate(200px);
+  }
+
+  100%{
+
+    -webkit-transform: translate(1000px);
+       -moz-transform: translate(1000px);
+        -ms-transform: translate(1000px);
+         -o-transform: translate(1000px);
+            transform: translate(1000px);
+  }
+}
